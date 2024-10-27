@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <SessionWrap>
-        <body>
+        <body className="mb-5">
           {children}
         </body>
       </SessionWrap>
