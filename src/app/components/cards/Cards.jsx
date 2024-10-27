@@ -7,9 +7,6 @@ const Cards = () => {
     return (
         <div className="grid grid-cols-2 space-x-4 space-y-4">
             <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
         </div>
     );
 };
