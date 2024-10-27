@@ -6,7 +6,7 @@ const RemoveBtn = ({ id }) => {
     const removeTopic = async () => {
         const action = confirm("Are you sure?");
         if (action) {
-            const res = await fetch(`http://localhost:3000/api/topics?id=${id}`, {
+            const res = await fetch(`https://my-todo-murex-rho.vercel.app/api/topics?id=${id}`, {
                 method: "DELETE",
             })
             if (res.ok) {

@@ -7,7 +7,7 @@ import { useSession } from "next-auth/react";
 
 const getTopics = async () => {
     try {
-        const res = await fetch('http://localhost:3000/api/topics', {
+        const res = await fetch('https://my-todo-murex-rho.vercel.app/api/topics', {
             cache: "no-store"
         });
 

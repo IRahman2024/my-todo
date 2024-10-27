@@ -13,7 +13,7 @@ const EditTopicForm = ({ id, title, description }) => {
         e.preventDefault();
 
         try { // Add try block here
-            const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
+            const res = await fetch(`https://my-todo-murex-rho.vercel.app/api/topics/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
