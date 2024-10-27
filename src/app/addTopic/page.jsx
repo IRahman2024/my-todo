@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const addTopic = () => {
+const AddTopic = () => {
     const { data } = useSession();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -68,4 +68,4 @@ const addTopic = () => {
     );
 };
 
-export default addTopic;
+export default AddTopic;
