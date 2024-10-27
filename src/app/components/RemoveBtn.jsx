@@ -1,9 +1,26 @@
+'use client'
+import { useRouter } from "next/navigation";
 import { FaRegTrashAlt } from "react-icons/fa";
-const RemoveBtn = () => {
+const RemoveBtn = ({ id }) => {
+    const router = useRouter();
+    const removeTopic = async () => {
+        const action = confirm("Are you sure?");
+        if (action) {
+            const res = await fetch(`http://localhost:3000/api/topics?id=${id}`, {
+                method: "DELETE",
+            })
+            if (res.ok) {
+                alert("Topic deleted successfully");
+                router.refresh();
+            }
+        }
+    }
+
     return (
-        <button 
-        size={24}
-        className="text-red-600"><FaRegTrashAlt /></button>
+        <button
+            size={24}
+            onClick={removeTopic}
+            className="text-red-600"><FaRegTrashAlt /></button>
     );
 };
 
